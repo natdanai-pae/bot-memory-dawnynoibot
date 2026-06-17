@@ -16,6 +16,7 @@ tags:
 
 - SSH access target: `100.93.110.89` through Tailscale.
 - Tailscale device name: `tablet-bctpavji` (`100.93.110.89`), shown as a Windows device in Tailscale status on 2026-06-17.
+- Windows username on the tablet: `dawnp` (`whoami` returns `tablet-bctpavji\dawnp`; hostname is `TABLET-BCTPAVJI`).
 - Basic method: connect with `ssh <user>@100.93.110.89` from a machine on the same Tailscale network.
 - On the Mac currently running Hermes, Tailscale's App Store CLI is available at `/Applications/Tailscale.app/Contents/MacOS/Tailscale`; `tailscale ssh` is unavailable in this build, so use regular `ssh`.
 - Test on 2026-06-12: TCP port `22` is reachable (`nc -vz -G 8 100.93.110.89 22` succeeded), and SSH host key was accepted into `known_hosts`.
